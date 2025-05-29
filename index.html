@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time and Day Webpage</title>
+  <style>
+    body {
+     font-family: 'Courier New', Courier, monospace;
+      color: white;
+      text-align: left;
+      padding-top: 70px;
+      transition: background-color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Domonique Staple</h1>
+<h2>Course: Web Development Programming</h2>
+<h3>Major: Computer Science</h3>
+<p>Welcome to my Webpage!</p>
+
+<script>
+    
+  function setBackgroundBasedOnTime() {
+    const hour = new Date().getHours();
+    let backgroundColor;
+
+    if (hour >= 6 && hour < 12) {
+      backgroundColor = "#FFE5B4"; 
+    } else if (hour >= 12 && hour < 18) {
+      backgroundColor = "#ADD8E6"; 
+    } else if (hour >= 18 && hour < 21) {
+      backgroundColor = "#D8BFD8"; 
+    } else {
+      backgroundColor = "#191970"; 
+    }
+
+    document.body.style.backgroundColor = backgroundColor;
+  }
+
+  setBackgroundBasedOnTime();
+  
+</script>
+</body>
+</html>
