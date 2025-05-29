@@ -2,46 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Time and Day Webpage</title>
+  <title>Time and Day</title>
   <style>
     body {
-     font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', Courier, monospace;
       color: white;
-      text-align: left;
+      text-align: center;
       padding-top: 70px;
-      transition: background-color 0.5s ease;
+      transition: background-color 0.5s;
     }
   </style>
 </head>
 <body>
-
-<h1>Domonique Staple</h1>
-<h2>Course: Web Development Programming</h2>
-<h3>Major: Computer Science</h3>
-<p>Welcome to my Webpage!</p>
-
-<script>
     
-  function setBackgroundBasedOnTime() {
+  <h1>Domonique Staple</h1>
+  <h2>Web Development Fundamentals</h2>
+  <h3>Major: Computer Science</h3>
+  <p>Welcome to my dynamic webpage!</p>
+
+  <script>
+    // Get current hour
     const hour = new Date().getHours();
-    let backgroundColor;
+    let color = "#222"; // Default color
 
     if (hour >= 6 && hour < 12) {
-      backgroundColor = "#FFE5B4"; 
+      color = "#FAFAD2"; // Morning
     } else if (hour >= 12 && hour < 18) {
-      backgroundColor = "#ADD8E6"; 
+      color = "#90EE90"; // Afternoon
     } else if (hour >= 18 && hour < 21) {
-      backgroundColor = "#D8BFD8"; 
+      color = "#FFA07A"; // Evening
     } else {
-      backgroundColor = "#191970"; 
+      color = "#191970"; // Night
     }
 
-    document.body.style.backgroundColor = backgroundColor;
-  }
-
-  setBackgroundBasedOnTime();
-  
-</script>
+    document.body.style.backgroundColor = color;
+  </script>
 </body>
 </html>
